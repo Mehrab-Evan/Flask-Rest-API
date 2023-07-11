@@ -39,7 +39,7 @@ class Cars(Resource):
     def post(self):
         # for sending this data we import request from flask
         data = request.json
-        itemId = len(MehrabDatabase.key()) + 1  # Selecting the index where the post requested data will be added
+        itemId = len(MehrabDatabase.keys()) + 1  # Selecting the index where the post requested data will be added
         MehrabDatabase[itemId] = {'name': data['name']} # Adding the new Post requested Data to the Dictionary file
         return MehrabDatabase
 
